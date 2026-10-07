@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pour mon Chou 💌</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;display:flex;align-items:center;
+ justify-content:center;padding:20px;
+ font-family:Georgia,serif;color:#542b3a;
+ background:linear-gradient(135deg,#fff0f5,#fce4ec,#fff8fb)
+}
+.card{
+ width:100%;max-width:520px;background:#ffffffee;
+ border-radius:28px;padding:35px 25px;text-align:center;
+ box-shadow:0 15px 45px #82405a30
+}
+.heart{font-size:50px}
+h1{font-size:30px}
+p{font-size:17px;line-height:1.7}
+input{
+ width:100%;padding:15px;border:1px solid #e8b9ca;
+ border-radius:14px;text-align:center;font-size:18px;margin:15px 0
+}
+button{
+ border:0;border-radius:30px;padding:14px 25px;
+ background:#c85a7c;color:white;font-size:16px
+}
+.hidden{display:none}
+.letter{
+ margin-top:20px;text-align:left;background:#fff8fb;
+ border-radius:20px;padding:23px;line-height:1.8
+}
+.sign{text-align:right;margin-top:20px;font-style:italic}
+#error{color:#b33b5b}
+</style>
+</head>
+
+<body>
+<div class="card">
+
+<div id="login">
+<div class="heart">💗</div>
+<h1>Pour mon Chou 💌</h1>
+<p>Une petite surprise t'attend ici…<br>
+Mais elle est protégée par un petit secret. 🤫</p>
+
+<input id="password" type="password"
+placeholder="Entre le mot de passe">
+
+<br>
+<button onclick="openLetter()">Ouvrir ma surprise 💕</button>
+
+<p id="error"></p>
+</div>
+
+<div id="letter" class="hidden">
+<div class="heart">💌</div>
+<h1>Pour toi, Quentin ❤️</h1>
+
+<div class="letter">
+Coucou Chou ❤️
+
+Je te fais cette lettre aujourd’hui parce que je voulais te dire que je t’aime très fort. 🫶🏼
+
+Tu le dis souvent, que tu n’es pas à la hauteur, mais crois-moi, tu l’es. Et je t’aime d’un amour infini. ❤️
+
+Alors voilà… Je t’aime. Non, ce n’est pas pour nos 10 mois ou je ne sais pas quoi, mais voilà, je voulais simplement changer ma façon de te le dire.
+
+Je t’aime vraiment très fort. 🥹❤️
+
+<div class="sign">
+Bisous mon Chou,<br>
+Ta Princesse 💗
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+function openLetter(){
+ if(document.getElementById("password").value==="2712"){
+   document.getElementById("login").classList.add("hidden");
+   document.getElementById("letter").classList.remove("hidden");
+ }else{
+   document.getElementById("error").textContent=
+   "Hmm… ce n’est pas le bon secret 💗";
+ }
+}
+</script>
+
+</body>
+</html>
